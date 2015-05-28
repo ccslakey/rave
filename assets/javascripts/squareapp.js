@@ -35,6 +35,7 @@ var $clear = $("<button class='clearButton'>"+
   "clear the demo squares"+"</button>")
   $('#buttonPlace').prepend($clear);
 
+
 $sButt.on('click', function(){
     //generates a 5X6 table of squares
     //inside of the table "moTings"
