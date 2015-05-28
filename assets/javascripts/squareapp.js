@@ -4,16 +4,8 @@ $(function () {
   var bluey;
   var greeny;
 //selecting the table
-//#moTings has the button prepended, but I don't want that
 var myTable = $("#moTings");
 
-/*  HOW TO SELECT ELEMENTS ON THE TABLE 
-//the table with just the rows
-//an individual row
-theTable[0]
-//selecting a single item of that row
-theTable[0].children[0]
-*/
 
 $("body").on("submit", "#signupForm", function (e) {
     var $this =  $(this);
@@ -26,15 +18,15 @@ $("body").on("submit", "#signupForm", function (e) {
   });
 
 //squarebutton goes at the top of the table
-var $sButt = $("<button class='squareButton'>"+
-  "Demo some squares"+"</button>")
-  $('#buttonPlace').prepend($sButt);
+var $sButt = $('<a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span> Make Squares</a>');
+  
 
 // clear squares button
-var $clear = $("<button class='clearButton'>"+
-  "clear the demo squares"+"</button>")
+var $clear = $('<a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Throw away rave</a>');
+  
+  //attach both buttons
   $('#buttonPlace').prepend($clear);
-
+  $('#buttonPlace').prepend($sButt);
 
 $sButt.on('click', function(){
     //generates a 5X6 table of squares
@@ -45,8 +37,8 @@ $sButt.on('click', function(){
 });
 
 $clear.on('click', function(){
-
-  $("#moTings").children()[2].html("")
+ ////clear the table
+ $("#moTings").find("td").remove()
 });
 
 
@@ -57,7 +49,7 @@ function squaresGen(){
     //init random color
     var hue = 'rgb(0,0,0)';
     //init a rave square table item and give it some style
-    var $raveSq = $("<td id='rave'></td>")
+    var $raveSq = $("<td class='rave'></td>")
         $raveSq.css({
     "width": "150px",
     "height": "150px",
@@ -68,7 +60,7 @@ function squaresGen(){
       window.setInterval(function(){
         var hue = 'rgb(' + (Math.floor(Math.random() * redy)) +',' + (Math.floor(Math.random() * greeny)) + ',' + (Math.floor(Math.random() * bluey)) +')';
         $raveSq.css('backgroundColor', hue);
-     }, 1000);
+     }, 600);
     //append the square somewhere
     //also gives the table some params 
     //as to how many things can be there

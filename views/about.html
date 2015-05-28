@@ -23,7 +23,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-        <script src="../assets/javascripts/squareapp.js"></script>
+        <script src="../assets/javascripts/about.js"></script>
   </head>
   <body>
     <!-- Fixed navbar -->
@@ -53,43 +53,45 @@
 
 
   <!-- *****************************************************************************************************************
-   TITLE & CONTENT
+    CONTENT
    ***************************************************************************************************************** -->
 
    <div class="container mtb">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 centered">
-        <h2>.ly .ly .ly</h2>
+        <h2>About Rave.ly</h2>
+        <br>
+        <em>This is an app built for friends who want 
+        to rave together. Currently, there aren't that 
+        many features! A list of them and future features will be at the bottom of this page and on our Github readme file. This page is devoted to demystifying the code behind Rave.ly</em>
+        <br>
         <br>
         <div class="prettyline"></div>
       </div>
+
+        <div class="col-lg-8 col-lg-offset-2 left">
+        <h4>What are Rave Squares?</h4>
+        <br>
+        <em>A Rave square is a small square with some 
+        CSS and Javascript info. That's all! Oh, and details? Well...</em>
+        <br> <br>
+        <div id="postHere"></div>
+        <br> <br>
+        <em>"Ok, cool," you're saying, "but what the heck is going on behind the scenes!?"</em>
+        <br> <br>
+        <em>When this page loads, it calls a javascript function that attaches an element with height and width, but no color. A timer alternates betwen a random color for that square.
+
+        When you assemble a bunch of these squares into a table, it looks like you've created your very own rave. Woo hoo!</em>
+        <div class="prettyline"></div>
+      </div>
+      <div class="col-lg-8 col-lg-offset-2 left">
+        <p>some stuff</p>
+      </div>
+    <div class="prettyline"></div>
     </div>
    </div><! --/container -->
    
-  <!-- *****************************************************************************************************************
-   PORTFOLIO SECTION
-   ***************************************************************************************************************** -->
- <!-- just what is a rave square? -->
-<!-- why should anyone care? -->
-<!-- ok, i care, how does it work -->
-<!-- i still don't care, you sound like a tosser -->
-<!-- rgb controls -->
-<!-- just what does this do? -->
-<div class="sliders yui3-skin-sam">
-    <dl>
-        <dt>R: <span id="r-val" class="val"></span></dt><dd id="r-slider"></dd>
-        <dt>G: <span id="g-val" class="val"></span></dt><dd id="g-slider"></dd>
-        <dt>B: <span id="b-val" class="val"></span></dt><dd id="b-slider"></dd>
-    </dl>
-</div>
-<div class="color"></div>
-<div class="output">
-    <dl>
-        <dt>Hex:</dt><dd id="hex"></dd>
-        <dt>RGB:</dt><dd id="rgb"></dd>
-        <dt>HSL:</dt><dd id="hsl"></dd>
-    </dl>
-</div>
+
 
    
 
