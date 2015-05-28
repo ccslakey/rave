@@ -1,5 +1,9 @@
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/library_app");
+mongoose.connect();
 
 module.exports.User = require("./user");
 
+
+mongoose.connect( process.env.MONGOLAB_URI ||
+               process.env.MONGOHQ_URL || 
+               "mongodb://localhost/library_app")
