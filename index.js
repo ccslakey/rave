@@ -44,19 +44,12 @@ app.get("/", function (req, res) {
   var homePath = path.join(views, "home.html");
   res.sendFile(homePath);
 });
-
+//logout route: needs to be implemented with a button
 app.get("/logout", function(req, res){
     res.send("goodbye!");
     req.logout;
 });
-
-
-app.get("/signup", function (req, res) {
-  var signupPath = path.join(views, "signup.html");
-  res.sendFile(signupPath);
-});
-
-
+///sign up route: someone just signed up! hooray
 app.post("/users", function (req, res) {
   var newUser = req.body.user;
   console.log(req.body.user);
@@ -69,14 +62,7 @@ app.post("/users", function (req, res) {
     }
   });
 });
-
-
-app.get("/login", function (req, res) {
-  var loginPath = path.join(views, "login.html");
-
-  res.sendFile(loginPath);
-})
-
+//a user just signed in! hooray!
 app.post("/login", function (req, res) {
   var user = req.body.user;
 
@@ -90,11 +76,11 @@ app.post("/login", function (req, res) {
     }
   })
 });
-
+//not yet
 app.get("/profile", function (req, res) {
   res.send("COMING SOON");
 });
-
+//listening heroku & 3000 for local host
 app.listen(process.env.PORT || 3000, function () {
   console.log("Running!");
 })
