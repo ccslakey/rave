@@ -6,7 +6,11 @@ $(function () {
 //selecting the table
 var myTable = $("#moTings");
 
-
+/*
+prevents default on form submission, resets
+form fields
+posts data like the simple login, but adds .serialize
+*/
 $("body").on("submit", "#signupForm", function (e) {
     var $this =  $(this);
     e.preventDefault();
@@ -16,11 +20,17 @@ $("body").on("submit", "#signupForm", function (e) {
         $this[0].reset()
       });
   });
-
-//squarebutton goes at the top of the table
+$("body").on("submit", "#signinForm", function (e) {
+    var $this =  $(this);
+    e.preventDefault();
+    $.post("/users", $this.serialize()).
+      done(function (data) {
+        console.log("SAVED", data);
+        $this[0].reset()
+      });
+  });
+//squarebutton and clear button go atop top the table
 var $sButt = $('<a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span> Make Squares</a>');
-  
-
 // clear squares button
 var $clear = $('<a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Throw away rave</a>');
   
@@ -29,9 +39,10 @@ var $clear = $('<a href="#" class="btn btn-danger"><span class="glyphicon glyphi
   $('#buttonPlace').prepend($sButt);
 
 $sButt.on('click', function(){
-    //generates a 5X6 table of squares
+    //generates table of squares that fits within the current 
     //inside of the table "moTings"
-    for (var i=0; i<36; i++){
+    //up to 50 currently, excess squares are not appended though
+    for (var i=0; i<50; i++){
         squaresGen();
     }
 });
@@ -143,7 +154,10 @@ YUI().use('slider', 'color', function (Y) {
 
 
      //set color values dynamically by updating
-     //colors continuously       
+     //colors continuously    
+     //this is the important part,
+     //i need to find something that recursively
+     //updates colors IOT have the same dynamic color-changing   
     rVal.set('text', rSlider.get('value'));
     gVal.set('text', gSlider.get('value'));
     bVal.set('text', bSlider.get('value'));
