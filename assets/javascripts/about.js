@@ -1,3 +1,10 @@
+////////////////
+////////////////
+//THIS IS THE ABOUT PAGE JS//
+////////////////
+////////////////
+
+
 $(function () {
 //places a square in the What are Rave Squares section
 squaresGen();

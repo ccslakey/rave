@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true }));
 app.use("/assets", express.static("assets"))
 var views = path.join(__dirname, "views");
 
-//sessions config!!
+//sessions config
 app.use(session({
   secret: "SUPER STUFF",
   resave: false,

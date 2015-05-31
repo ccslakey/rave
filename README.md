@@ -10,7 +10,7 @@ The app currently uses the following web development technologies::  ::  ::  :: 
 	that serves up an html page(s) and a JSON API.
 -(RESTful Routes) Design the routes in a RESTful 	
 	manner.
--(MongoDB) Persist at least two models in a Mongo 		Database. (Currently only using one)
+-(MongoDB) Persist at least two models in a Mongo Database. (Currently only using one)
 -(AJAX) Leverage the backend API to fetch JSON 
 	asynchronously to the client.
 -(jQuery) Use jQuery to manipulate the DOM and/or 
@@ -21,8 +21,8 @@ The app currently uses the following web development technologies::  ::  ::  :: 
 	inputs during sign up, such as unique email addresses, and minimum password lengths.
 -Model Relationship Create a has_many relationship 
 	between the User and another model using either embedded or referenced data.
--Visual Design Use Twitter Bootstrap to kick-start  
-	the front-end.
+-Visual Design using Twitter Bootstrap to kick-start
+	the front-end. Used Bootbundle (http://www.bootbundle.com/) for themes and Pingendo (http://pingendo.com/) for editing and prototyping pages.
 -Code deployed on Heroku
 
 
@@ -31,7 +31,7 @@ The end product after a week of work was not exactly there. This is a list of br
 -Profiles will improve that
 -Profiles a user can edit (their own only)
 -Get a new RGB controller
--SAVE raves to DB: this will require mapping out the 		table into a DB-friendly state
--Underscore templates
+-SAVE raves to DB: this will require mapping out the table into a DB-friendly state. **IMPORTANT**
+-Underscore templates to serve everything up in a single page app
 -Heroku issues with logging in
 -Web sockets chat

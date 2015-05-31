@@ -142,7 +142,8 @@ YUI().use('slider', 'color', function (Y) {
     }
 
 
-            
+     //set color values dynamically by updating
+     //colors continuously       
     rVal.set('text', rSlider.get('value'));
     gVal.set('text', gSlider.get('value'));
     bVal.set('text', bSlider.get('value'));
