@@ -11,6 +11,9 @@ app.use(bodyParser.urlencoded({extended: true }));
 app.use("/assets", express.static("assets"))
 var views = path.join(__dirname, "views");
 
+//serve bower components on static
+app.use("/bower_components", express.static("bower_components"))
+
 //sessions config
 app.use(session({
   secret: "SUPER STUFF",
