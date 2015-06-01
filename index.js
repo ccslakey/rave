@@ -52,7 +52,7 @@ app.get("/about.html", function (req, res) {
 //logout route: needs to be implemented with a button
 app.get("/logout", function(req, res){
     res.send("goodbye!");
-    req.logout;
+    req.logout();
 });
 ///sign up route: someone just signed up! hooray
 app.post("/users", function (req, res) {
