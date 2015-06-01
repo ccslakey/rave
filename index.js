@@ -44,6 +44,11 @@ app.get("/", function (req, res) {
   var homePath = path.join(views, "home.html");
   res.sendFile(homePath);
 });
+//serve up about page
+app.get("/about.html", function (req, res) {
+  var aboutPath = path.join(views, "about.html");
+  res.sendFile(aboutPath);
+});
 //logout route: needs to be implemented with a button
 app.get("/logout", function(req, res){
     res.send("goodbye!");
